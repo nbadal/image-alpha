@@ -1,0 +1,10 @@
+{
+   "manifest_version": 2,
+   "content_scripts": [ {
+      "css": [ "image-alpha.css" ],
+      "matches": [ "http://*/*.png*", "file:///*/*.png*", "https://*/*.png*" ]
+   } ],
+	"description": "Places a transparency grid in image viewing html",
+   "name": "ImageAlpha",
+   "version": "1.0"
+}
