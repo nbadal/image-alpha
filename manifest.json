@@ -1,10 +1,36 @@
 {
-   "manifest_version": 2,
-   "content_scripts": [ {
-      "css": [ "image-alpha.css" ],
-      "matches": [ "http://*/*.png*", "file:///*/*.png*", "https://*/*.png*" ]
-   } ],
-	"description": "Places a transparency grid in image viewing html",
-   "name": "ImageAlpha",
-   "version": "1.0"
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "css": [
+        "spectrum.css",
+        "image-alpha.css"
+      ],
+      "matches": [
+        "http://*/*.png*",
+        "file:///*/*.png*",
+        "https://*/*.png*"
+      ],
+      "js": [
+        "jquery-1.11.3.min.js",
+        "spectrum.js",
+        "content.js"
+      ]
+    }
+  ],
+  "description": "Places a transparency grid in image viewing html",
+  "name": "ImageAlpha",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "contextMenus"
+  ],
+  "icons": {
+    "64": "icon64.png"
+  }
 }
